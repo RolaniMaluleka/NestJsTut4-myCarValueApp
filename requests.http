@@ -7,3 +7,21 @@ content-type: application/json
     "password": "1277639283"
    
 }
+
+### Find a specific user by Id
+GET  http://localhost:3000/auth/2
+
+### Find All users with a given email
+GET http://localhost:3000/auth?
+
+### Delete a user by specified id
+DELETE http://localhost:3000/auth/2
+
+### Update a specific user based on id 
+PATCH http://localhost:3000/auth/3
+content-type: application/json
+
+{
+    "email": "rolani1@icloud.com",
+    "password": "12948595"
+}
