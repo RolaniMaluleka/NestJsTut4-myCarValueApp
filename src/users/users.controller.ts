@@ -1,16 +1,15 @@
-import { Controller, Post, Body, NotAcceptableException } from '@nestjs/common';
+import { Controller, Post, Body, NotAcceptableException, BadRequestException } from '@nestjs/common';
 import { CreateUserDto } from './dtos/create-user.dto';
+import { UsersService } from './users.service';
 
 @Controller('auth')
 export class UsersController {
 
-    @Post('/signup')
-    createUser(@Body() body: CreateUserDto) {
-        console.log(body);
+    constructor(private userService: UsersService){}
 
-        if(!body){
-            throw new NotAcceptableException('Email and password are of type string');
-        }
+    @Post('/signup')
+     createUser(@Body() body: CreateUserDto) {
+       this.userService.create(body.email, body.password);
     }
 
 }
