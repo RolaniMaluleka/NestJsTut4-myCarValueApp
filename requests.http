@@ -3,13 +3,13 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "rolani3@icloud.com",
+    "email": "rolani6@icloud.com",
     "password": "1277639283"
    
 }
 
 ### Find a specific user by Id
-GET  http://localhost:3000/auth/1
+GET  http://localhost:3000/auth/5
 
 ### Find All users with a given email
 GET http://localhost:3000/auth?
