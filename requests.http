@@ -36,3 +36,9 @@ content-type: application/json
     "email": "rolani1@icloud.com",
     "password": "12948595"
 }
+
+# ### Set a color on a session
+# GET http://localhost:3000/auth/colors/blue
+
+# ### Get the color
+# GET http://localhost:3000/auth/colors
