@@ -1,10 +1,21 @@
-### Create a new user 
+### Signup a new user 
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "rolani6@icloud.com",
-    "password": "1277639283"
+    "email": "rolani7@icloud.com",
+    "password": "Given@1234"
+   
+}
+
+
+### Signin a new user 
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "rolani7@icloud.com",
+    "password": "Given@1234"
    
 }
 
