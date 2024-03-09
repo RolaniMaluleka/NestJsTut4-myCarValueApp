@@ -3,7 +3,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "rolani7@icloud.com",
+    "email": "rolani8@icloud.com",
     "password": "Given@1234"
    
 }
@@ -19,8 +19,15 @@ content-type: application/json
    
 }
 
+### Get the currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### Sign out a user
+POST http://localhost:3000/auth/signout 
+
+
 ### Find a specific user by Id
-GET  http://localhost:3000/auth/5
+GET  http://localhost:3000/auth/6
 
 ### Find All users with a given email
 GET http://localhost:3000/auth?
