@@ -8,13 +8,15 @@ const scrypt = promisify(_scrypt);
 
 @Injectable()
 export class AuthService {
+    static signup: any;
+    static signin: any;
     constructor(private userService: UsersService){}
 
     async signup(email: string, password: string){
         //See if the email is in use
         const users = await this.userService.find(email);
         if(users.length){
-            throw new BadRequestException
+            throw new BadRequestException('email is already use')
         }
 
         //Hash the user's password
