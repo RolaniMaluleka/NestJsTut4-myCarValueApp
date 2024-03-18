@@ -16,9 +16,9 @@ describe('Authentication System', () => {
   });
 
   it('handles a signup request', () => {
-    const email = 'asdf344@ghjk.com'
+    const email = 'asdf56@ghjk.com'
     return request(app.getHttpServer())
-      .post('auth/signup')
+      .post('/auth/signup')
       .send({ email, password: 'asdfghjkl'})
       .expect(201)
       .then((res) => {
@@ -27,5 +27,4 @@ describe('Authentication System', () => {
         expect(email).toEqual(email)
       });
    });
-
 });
